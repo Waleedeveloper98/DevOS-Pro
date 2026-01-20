@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins , sans-serif;
+}
+html , body,#root{
+    height: 100%;
+    width: 100%;
+}
+#root{
+    background-color: red;
+}
+
+
+main{
+    width: 100%;
+    height: 100%;
+    background: url("/public/wallpaper.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
