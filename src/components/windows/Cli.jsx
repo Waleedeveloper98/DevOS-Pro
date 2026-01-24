@@ -3,7 +3,7 @@ import MacWindow from "./MacWindow";
 import "./cli.scss";
 import Terminal from "react-console-emulator";
 
-const Cli = () => {
+const Cli = ({ windowName, setWindowsState }) => {
   const terminalRef = useRef(null);
   const commands = {
     help: {
@@ -111,7 +111,11 @@ Let’s build something great 🚀
   };
 
   return (
-    <MacWindow height="60vh">
+    <MacWindow
+      windowName={windowName}
+      setWindowsState={setWindowsState}
+      height="50vh"
+    >
       <div className="cli-window">
         <Terminal
           style={{
