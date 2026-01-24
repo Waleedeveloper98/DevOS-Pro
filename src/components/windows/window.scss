@@ -1,6 +1,6 @@
 .window {
-  width: 400px;
-  height: 250px;
+  // width: 800px;
+  height: 100%;
   background-color: rgb(37, 37, 37);
   border-radius: 0.4rem;
   overflow: hidden;
@@ -37,5 +37,8 @@
     .title{
         font-size: .65rem;
     }
+  }
+  .main-content{
+    height: 100%;
   }
 }

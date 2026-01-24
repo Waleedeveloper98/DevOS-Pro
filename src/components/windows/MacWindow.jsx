@@ -4,7 +4,14 @@ import { Rnd } from "react-rnd";
 
 const MacWindow = ({ children }) => {
   return (
-    <Rnd>
+    <Rnd
+      default={{
+        width: "40vw",
+        height: "50vh",
+        x: 200,
+        y: 100,
+      }}
+    >
       <div className="window">
         <div className="window-nav">
           <div className="dots">
