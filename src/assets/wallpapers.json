@@ -1,0 +1,13 @@
+{
+  "wallpapers": [
+    { "id": "wall1", "src": "./background-walls/wall1.jpg" },
+    { "id": "wall2", "src": "./background-walls/wall2.jpg" },
+    { "id": "wall3", "src": "./background-walls/wall3.jpg" },
+    { "id": "wall4", "src": "./background-walls/wall4.jpg" },
+    { "id": "wall5", "src": "./background-walls/wall5.jpg" },
+    { "id": "wall6", "src": "./background-walls/wall6.jpg" },
+    { "id": "wall7", "src": "./background-walls/wall7.jpg" },
+    { "id": "wall8", "src": "./background-walls/wall8.jpg" },
+    { "id": "wall9", "src": "./background-walls/wall9.jpg" }
+  ]
+}

@@ -1,0 +1,61 @@
+.walls-window {
+  width: 100%;
+  height: 100%;
+  padding: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  overflow: auto;
+  padding-top: 2rem;
+
+  .walls-top {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.8rem;
+    .wall {
+      width: 150px;
+      height: 90px;
+      border-radius: 0.3rem;
+      overflow: hidden;
+      cursor: pointer;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        object-fit: cover;
+      }
+    }
+  }
+  .walls-bottom {
+    padding-bottom: 10rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    button {
+        
+      padding: 8px 14px;
+      border-radius: 0.3rem;
+      border: none;
+      color: white;
+      font-weight: 500;
+      transition: all ease 0.3s;
+
+      &:active {
+        scale: 0.95;
+      }
+      &:nth-child(2){
+        background-color: gray;
+      }
+    }
+  }
+}
+.selectedWall {
+  border: 1.8px solid rgb(66, 66, 255);
+}
+
+.notSelectedWall {
+  border: 1.4px solid rgb(117, 117, 117);
+}

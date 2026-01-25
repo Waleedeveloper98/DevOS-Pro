@@ -8,7 +8,9 @@ const MacWindow = ({
   height = "40vw",
   windowName,
   setWindowsState,
+  title
 }) => {
+  
   return (
     <Rnd
       default={{
@@ -30,7 +32,7 @@ const MacWindow = ({
             <div className="dot yellow"></div>
             <div className="dot green"></div>
           </div>
-          <p className="title">muhammadwaleed - temp</p>
+          <p className="title">muhammadwaleed - {title}</p>
         </div>
         <div className="main-content">{children}</div>
       </div>

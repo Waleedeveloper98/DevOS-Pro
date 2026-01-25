@@ -4,8 +4,11 @@
   padding-bottom: 10rem;
   background: linear-gradient(180deg, #020617, #0f172a);
 
-  div[name="react-console-emulator"]{
-      background: linear-gradient(180deg, #020617, #0f172a) !important;
+  div[name="react-console-emulator"] {
+    background: linear-gradient(180deg, #020617, #0f172a) !important;
     //   color: #e5e7eb;
+  }
+  * {
+    font-family: "Source Code Pro", monospace;
   }
 }

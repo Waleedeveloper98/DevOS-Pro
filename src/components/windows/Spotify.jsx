@@ -8,6 +8,8 @@ const Spotify = ({ windowName, setWindowsState }) => {
       windowName={windowName}
       setWindowsState={setWindowsState}
       width="30vw"
+      title={"Spotify"}
+      height="60vh"
     >
       <div className="spotify-window">
         <iframe

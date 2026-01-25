@@ -115,6 +115,7 @@ Let’s build something great 🚀
       windowName={windowName}
       setWindowsState={setWindowsState}
       height="50vh"
+      title={"Cli"}
     >
       <div className="cli-window">
         <Terminal
@@ -123,7 +124,7 @@ Let’s build something great 🚀
             borderRadius: "14px",
             padding: "12px",
             boxShadow: "0 20px 60px rgba(0,0,0,0.6)",
-            fontFamily: "'JetBrains Mono', monospace",
+            // fontFamily: "'JetBrains Mono', monospace",
           }}
           contentStyle={{
             color: "#e5e7eb",

@@ -1,5 +1,6 @@
 import React from "react";
 import "./dock.scss";
+import { Tooltip as ReactTooltip, Tooltip } from "react-tooltip";
 
 const Dock = ({ setWindowsState }) => {
   return (
@@ -11,6 +12,8 @@ const Dock = ({ setWindowsState }) => {
             github: true,
           }))
         }
+        data-tooltip-id="my-tooltip"
+        data-tooltip-content="github"
         className="icon github"
       >
         <img src="./dock-icons/github.png" alt="" />
@@ -22,6 +25,8 @@ const Dock = ({ setWindowsState }) => {
             note: true,
           }))
         }
+        data-tooltip-id="my-tooltip"
+        data-tooltip-content="notes"
         className="icon notes"
       >
         <img src="./dock-icons/notes.png" alt="" />
@@ -33,6 +38,8 @@ const Dock = ({ setWindowsState }) => {
             resume: true,
           }))
         }
+        data-tooltip-id="my-tooltip"
+        data-tooltip-content="pdf"
         className="icon pdf"
       >
         <img src="./dock-icons/pdf.png" alt="" />
@@ -42,6 +49,8 @@ const Dock = ({ setWindowsState }) => {
           window.open("https://calendar.google.com", "_blank");
         }}
         className="icon calendar"
+        data-tooltip-id="my-tooltip"
+        data-tooltip-content="calendar"
       >
         <img src="./dock-icons/calendar.png" alt="" />
       </div>
@@ -53,6 +62,8 @@ const Dock = ({ setWindowsState }) => {
           }))
         }
         className="icon spotify"
+        data-tooltip-id="my-tooltip"
+        data-tooltip-content="spotify"
       >
         <img src="./dock-icons/spotify.png" alt="" />
       </div>
@@ -61,6 +72,8 @@ const Dock = ({ setWindowsState }) => {
           window.open("mailto:waleedeveloper100@gmail.com");
         }}
         className="icon mail"
+        data-tooltip-id="my-tooltip"
+        data-tooltip-content="mail"
       >
         <img src="./dock-icons/mail.png" alt="" />
       </div>
@@ -72,8 +85,24 @@ const Dock = ({ setWindowsState }) => {
           );
         }}
         className="icon link"
+        data-tooltip-id="my-tooltip"
+        data-tooltip-content="link"
       >
         <img src="./dock-icons/link.png" alt="" />
+      </div>
+      <div
+        onClick={() => {
+          setWindowsState((prev) => ({
+            ...prev,
+            wallpaper: true,
+          }));
+        }}
+        title="walls"
+        className="icon walls"
+        data-tooltip-id="my-tooltip"
+        data-tooltip-content="wallpapers"
+      >
+        <img src="./dock-icons/walls.png" alt="" />
       </div>
       <div
         onClick={() =>
@@ -83,9 +112,18 @@ const Dock = ({ setWindowsState }) => {
           }))
         }
         className="icon cli"
+        data-tooltip-id="my-tooltip"
+        data-tooltip-content="cli"
       >
         <img src="./dock-icons/cli.png" alt="" />
       </div>
+      <Tooltip
+        id="my-tooltip"
+        style={{
+          backgroundColor: "black",
+        }}
+        opacity={0.6}
+      />
     </footer>
   );
 };
