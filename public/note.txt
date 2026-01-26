@@ -1,105 +1,109 @@
 /**
- * @file: profile.config.ts
- * @author: Engineering Portfolio
- * @summary: A high-performance full-stack engineer.
+ * @file: waleed.profile.config.ts
+ * @author: Muhammad Waleed
+ * @summary: Frontend-focused MERN developer with strong UI & logic fundamentals.
  */
 
 // --------------------------------------------------
-// 1. CORE DEPENDENCIES & SKILLS
+// 1. CORE SKILLS & STACK
 // --------------------------------------------------
 
 const TECH_STACK = {
   frontend: [
-    "React.js",    // 100%
-    "Next.js",     // 95%
-    "TailwindCSS", // 90%
-    "Three.js",    // 70%
+    "React.js",        // Strong
+    "JavaScript (ES6+)", // Strong
+    "Tailwind CSS",    // Strong
+    "HTML5 & CSS3",    // Strong
   ],
   backend: [
-    "Node.js",     // 90%
-    "PostgreSQL",  // 85%
-    "Redis",       // 75%
-    "Docker",      // 80%
+    "Node.js",         // Intermediate
+    "Express.js",      // Intermediate
+    "MongoDB",         // Basic–Intermediate
   ],
-  tools: ["AWS", "Git", "Figma", "Linux"]
+  tools: [
+    "Git & GitHub",
+    "VS Code",
+    "Postman",
+    "Linux (Basics)",
+  ],
 };
 
 // --------------------------------------------------
-// 2. EXPERIENCE LOG (Reverse Chronological)
+// 2. PROJECT EXPERIENCE (Learning-Based)
 // --------------------------------------------------
 
-class ProfessionalHistory {
-  
-  /** * CURRENT ROLE
-   * @period 2023 - Present 
+class ProjectExperience {
+
+  /**
+   * MAIN PROJECT
+   * @period 2024 - Present
    */
-  public async TechFlow_Systems(): Promise<Impact> {
-    const role = "Senior Full-Stack Engineer";
-    
-    // Key Achievements
-    const optimized = await api.optimize({ strategy: "Redis Caching" });
-    const latencyReduction = "40%";
-    
-    const leadership = this.mentor(["Jr. Dev 1", "Jr. Dev 2", "Jr. Dev 3"]);
-    const architecture = "Monolith -> Microservices Migration";
-    
-    return { role, optimized, architecture, leadership };
+  public DevOS_Pro(): Impact {
+    const role = "Frontend Developer (React)";
+
+    const features = [
+      "Interactive UI with React components",
+      "State management using hooks",
+      "Dynamic content menus & modals",
+      "Responsive layout with Tailwind CSS",
+    ];
+
+    const learningOutcomes = [
+      "Component-based architecture",
+      "Props & state flow",
+      "Conditional rendering",
+      "Clean folder structure",
+    ];
+
+    return { role, features, learningOutcomes };
   }
 
-  /** * PREVIOUS ROLE
-   * @period 2021 - 2023
+  /**
+   * PRACTICE PROJECTS
    */
-  public PixelPerfect_Studios(): void {
-    this.role = "Frontend Developer";
-    this.focus = "High-Fidelity Animations";
-    
-    // Implemented GSAP scroll-triggers for 15+ clients
-    // Improved Lighthouse Performance Scores: 65 -> 98
+  public Practice_Projects(): void {
+    // CRUD APIs with Express (GET, POST, PATCH, DELETE)
+    // DOM projects using JS classes
+    // UI clones & animations
+    // Error handling & edge cases
   }
 }
 
 // --------------------------------------------------
-// 3. COMPETITIVE ACHIEVEMENTS
+// 3. ACHIEVEMENTS & HIGHLIGHTS
 // --------------------------------------------------
 
-interface HackathonWin {
-  rank: number;
-  event: string;
-  project: string;
+interface Highlight {
+  title: string;
+  description: string;
 }
 
-const trophyCabinet: HackathonWin[] = [
+const highlights: Highlight[] = [
   {
-    rank: 1,
-    event: "Global AI Hackathon 2024",
-    project: "EcoVision (Computer Vision Waste Segregation)",
-    // Prize: $5,000
+    title: "Consistent Practice",
+    description: "Daily hands-on coding instead of tutorial-only learning",
   },
   {
-    rank: 500, // Top 500 Global
-    event: "Google Code Jam 2023",
-    project: "Algorithm Optimization (Dynamic Programming)",
-  }
+    title: "Strong Fundamentals",
+    description: "Clear understanding of props, state, APIs, and HTTP methods",
+  },
+  {
+    title: "UI-Focused Mindset",
+    description: "Always improving UX, animations, and interactivity",
+  },
 ];
 
 // --------------------------------------------------
-// 4. ACADEMIC BACKGROUND
+// 4. EDUCATION & SELF-LEARNING
 // --------------------------------------------------
 
-const education = new Map<string, string>([
-  ["Stanford University", "MS Computer Science (3.9 GPA)"],
-  ["MIT World Peace Univ", "B.Tech Information Tech (8.8 CGPA)"]
-]);
+const education = {
+  formal: "Undergraduate (In Progress / Completed)",
+  selfLearning: [
+    "React & MERN Stack",
+    "Frontend performance basics",
+    "Clean code & project structure",
+  ],
+};
 
-export default new ProfessionalHistory();
-
-
-```bash
-# TERMINAL OUTPUT
-# ---------------------------------------
-$ user --status
-> Status: Open to Opportunities
-> Location: Global / Remote
-> Loading Assets... [||||||||||] 100%
-> Ready.
-```
+export default new ProjectExperience();

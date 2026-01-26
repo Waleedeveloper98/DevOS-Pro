@@ -13,6 +13,8 @@ import { useContextMenu } from "react-contexify";
 import ContextMenu from "./components/contextMenu/ContextMenu";
 
 const App = () => {
+  const DEFAULT_WALLPAPER = "/wallpaper.webp";
+
   const [windowsState, setWindowsState] = useState({
     github: false,
     note: false,
@@ -22,8 +24,10 @@ const App = () => {
     cli: false,
   });
   const [selectedWallpaper, setSelectedWallpaper] = useState(null);
-  const [appliedWallpaper, setAppliedWallpaper] = useState(null);
-  const [defaultWallpaper, setDefaultWallpaper] = useState(null);
+  const [appliedWallpaper, setAppliedWallpaper] = useState(() => {
+    const savedWall = localStorage.getItem("wallpaper");
+    return savedWall ? JSON.parse(savedWall) : null;
+  });
 
   const setWall = (imgSrc) => {
     if (selectedWallpaper) {
@@ -44,7 +48,7 @@ const App = () => {
     if (selectedWallpaper) {
       setSelectedWallpaper(null);
     }
-    setDefaultWallpaper("url(/public/wallpaper.webp)");
+   localStorage.removeItem("wallpaper")
   };
 
   const MENU_ID = "main-menu";
@@ -83,6 +87,12 @@ const App = () => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [MENU_ITEMS]);
 
+  useEffect(() => {
+    if (appliedWallpaper) {
+      localStorage.setItem("wallpaper", JSON.stringify(appliedWallpaper));
+    }
+  }, [appliedWallpaper]);
+
   return (
     <main
       onContextMenu={(e) => {
@@ -90,7 +100,7 @@ const App = () => {
         show({ event: e });
       }}
       style={{
-        backgroundImage: `${appliedWallpaper ? `url(${appliedWallpaper})` : "url(/wallpaper.webp)"}`,
+        backgroundImage: `url(${appliedWallpaper || DEFAULT_WALLPAPER})`,
       }}
     >
       <Nav />
@@ -119,7 +129,6 @@ const App = () => {
           windowName="wallpaper"
           setWindowsState={setWindowsState}
           handleDefaultWallpaper={handleDefaultWallpaper}
-          defaultWallpaper={defaultWallpaper}
         />
       )}
 

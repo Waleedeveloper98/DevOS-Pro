@@ -87,7 +87,7 @@ const Dock = ({ setWindowsState }) => {
         }}
         className="icon link"
         data-tooltip-id="my-tooltip"
-        data-tooltip-content="link"
+        data-tooltip-content="linkedIn"
       >
         <img src="./dock-icons/link.png" alt="" />
       </div>
