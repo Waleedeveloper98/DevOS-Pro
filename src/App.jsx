@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./app.scss";
 import "react-tooltip/dist/react-tooltip.css";
 import Dock from "./components/dock/Dock";
@@ -51,6 +51,38 @@ const App = () => {
 
   const { show } = useContextMenu({ id: MENU_ID });
 
+  const MENU_ITEMS = [
+    { label: "Open GitHub", window: "github", shortcut: "⌘ G", key: "g" },
+    { label: "Open Notes", window: "note", shortcut: "⌘ M", key: "m" },
+    { label: "View Resume", window: "resume", shortcut: "⌘ R", key: "r" },
+    { label: "Open Spotify", window: "spotify", shortcut: "⌘ S", key: "s" },
+
+    { type: "separator" },
+
+    { label: "Change Wallpaper", window: "wallpaper" },
+    { label: "Open Terminal", window: "cli", shortcut: "⌘ Q", key: "q" },
+  ];
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (!e.metaKey && !e.ctrlKey) return;
+
+      const key = e.key.toLowerCase();
+
+      const currentItem = MENU_ITEMS.find((i) => i.key === key);
+
+      if (currentItem) {
+        e.preventDefault();
+        setWindowsState((prev) => ({
+          ...prev,
+          [currentItem.window]: true,
+        }));
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [MENU_ITEMS]);
+
   return (
     <main
       onContextMenu={(e) => {
@@ -91,9 +123,11 @@ const App = () => {
         />
       )}
 
-      <ContextMenu menuId={MENU_ID} setWindowsState={setWindowsState} />
-
-      
+      <ContextMenu
+        menuId={MENU_ID}
+        setWindowsState={setWindowsState}
+        menu={MENU_ITEMS}
+      />
     </main>
   );
 };

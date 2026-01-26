@@ -3,29 +3,18 @@ import { Item, Menu, Separator } from "react-contexify";
 import "react-contexify/dist/ReactContexify.css";
 import "./contextMenu.scss";
 
-const ContextMenu = ({ menuId, setWindowsState }) => {
-  const MENU_ITEMS = [
-    { label: "Open GitHub", window: "github" },
-    { label: "Open Notes", window: "note" },
-    { label: "View Resume", window: "resume" },
-    { label: "Open Spotify", window: "spotify" },
-
-    // separator marker
-    { type: "separator" },
-
-    { label: "Change Wallpaper", window: "wallpaper" },
-    { label: "Open Terminal", window: "cli" },
-  ];
+const ContextMenu = ({menu, menuId, setWindowsState }) => {
+ 
 
   return (
     <>
-      <Menu  animation="slide" id={menuId} className="os-context-menu">
-        {MENU_ITEMS.map((item, index) => {
+      <Menu animation="slide" id={menuId} className="os-context-menu">
+        {menu.map((item, index) => {
           if (item.type === "separator") {
             return <Separator key={index} />;
           }
           return (
-            <Item 
+            <Item
               onClick={() =>
                 setWindowsState((prev) => ({
                   ...prev,
@@ -33,7 +22,8 @@ const ContextMenu = ({ menuId, setWindowsState }) => {
                 }))
               }
             >
-              {item.label}
+              <div>{item.label}</div>
+              {item.shortcut && <div>{item.shortcut}</div>}
             </Item>
           );
         })}
