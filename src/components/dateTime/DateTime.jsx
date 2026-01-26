@@ -15,7 +15,6 @@ const DateTime = () => {
           minute: "2-digit",
           hour12: true,
         })
-        .toLowerCase()
         .replace(/,/g, "");
       setCurrentDate(formattedDateTime);
     };

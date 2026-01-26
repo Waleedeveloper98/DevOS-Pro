@@ -1,0 +1,14 @@
+#dog{
+    // border: 2px solid;
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    position: absolute;
+    bottom: 3.6rem;
+    left:92%;
+    transform: translateX(-50%);
+
+   *{
+    object-fit: cover;
+   }
+}

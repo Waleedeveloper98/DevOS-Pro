@@ -1,6 +1,7 @@
 import React from "react";
 import "./dock.scss";
 import { Tooltip as ReactTooltip, Tooltip } from "react-tooltip";
+import Pet from "../lottiePet/Pet";
 
 const Dock = ({ setWindowsState }) => {
   return (
@@ -124,6 +125,9 @@ const Dock = ({ setWindowsState }) => {
         }}
         opacity={0.6}
       />
+
+      {/* lottie dog */}
+      <Pet />
     </footer>
   );
 };
