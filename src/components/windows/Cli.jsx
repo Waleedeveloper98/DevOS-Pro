@@ -14,10 +14,11 @@ const Cli = ({ windowName, setWindowsState }) => {
 │   📟 Portfolio Terminal Commands     │
 └──────────────────────────────────────┘
 
-about        → Learn more about me
-skills       → View my technical skills
-projects     → Explore my projects
-contact      → Get my contact details
+about        → Who I am & what I build
+skills       → Technical skills
+projects     → Selected work
+experience   → How I learn & work
+contact      → Ways to reach me
 clear        → Clear the terminal
 
 Tip: Commands are case-insensitive
@@ -32,13 +33,18 @@ Tip: Commands are case-insensitive
 │           👋 About Me                │
 └──────────────────────────────────────┘
 
-Name     : Muhammad Waleed
-Role     : Front-End Developer
-Focus    : Clean UI, UX & Performance
+Name  : Muhammad Waleed
+Role  : Front-End Developer (React)
+Focus : Interactive UI & clean UX
 
-I enjoy building interactive web
-experiences using modern technologies
-and writing maintainable code.
+I enjoy building web interfaces that
+feel more like products than pages.
+
+Recently, I’ve been exploring
+desktop-style UI patterns on the web
+using React — windows, docks,
+command-based navigation, and state-
+driven interactions.
 `,
     },
 
@@ -51,15 +57,21 @@ and writing maintainable code.
 └──────────────────────────────────────┘
 
 Frontend
-  • HTML5
-  • CSS3 / Tailwind CSS
+  • HTML5, CSS3
+  • Tailwind CSS
   • JavaScript (ES6+)
-  • React
+  • React (Hooks, State, Components)
 
-Tools & Workflow
+UI & UX
+  • Responsive layouts
+  • Animations & micro-interactions
+  • Component reusability
+  • Desktop-inspired UI patterns
+
+Tools
   • Git & GitHub
-  • Responsive Design
-  • Component-Based UI
+  • VS Code
+  • npm / package-based workflows
 `,
     },
 
@@ -71,14 +83,38 @@ Tools & Workflow
 │            📂 Projects               │
 └──────────────────────────────────────┘
 
-1. Portfolio Website
-   → Personal branding & UI showcase
+1. Interactive Portfolio OS
+   → OS-inspired UI built with React
+   → Dock, windows, terminal, apps
 
-2. Figma Clone (In Progress)
-   → Canvas, shapes, drag & resize
+2. Notes REST API
+   → Node.js & Express
+   → CRUD operations & routing
 
-3. Notes REST API
-   → Node.js, Express, CRUD operations
+3. UI Practice Projects
+   → Focused on layouts, components,
+     and real-world interactions
+`,
+    },
+
+    experience: {
+      description: "How I work & learn",
+      usage: "experience",
+      fn: () => `
+┌──────────────────────────────────────┐
+│           🧠 Experience              │
+└──────────────────────────────────────┘
+
+• Currently focused on Frontend
+  development with React
+
+• Practice-driven learning:
+  I build projects to understand
+  how things actually work
+
+• Interested in:
+  UI architecture, state management,
+  and product-like user experiences
 `,
     },
 
@@ -90,11 +126,12 @@ Tools & Workflow
 │           📬 Contact Info            │
 └──────────────────────────────────────┘
 
-Email     : muhammadwaleed@example.com
-GitHub    : github.com/muhammadwaleed
-LinkedIn  : linkedin.com/in/muhammadwaleed
+GitHub   : github.com/waleedeveloper98
+LinkedIn : linkedin.com/in/waleed-web-developer
+Email    : waleedeveloper100@gmail.com
 
-Let’s build something great 🚀
+Open to collaboration, learning,
+and frontend opportunities 🚀
 `,
     },
 
